@@ -1,13 +1,13 @@
 int div(int a, int b) {
-  return (a / b).toInt();
+  return a ~/ b;
 }
 
-List<int> gregorianToJalali(int g_y, int g_m, int g_d) {
+List<int> gregorianToJalali(int gY, int gM, int gD) {
 
   var gDaysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
   var jDaysInMonth = [31, 31, 31, 31, 31, 31, 30, 30, 30, 30, 30, 29];
-  int gy = g_y - 1600;
-  int gm = g_m - 1;
+  int gy = gY - 1600;
+  int gm = gM - 1;
   int gDayNo =
       (365 * gy + div(gy + 3, 4) - div(gy + 99, 100) + div(gy + 399, 400));
 
@@ -19,7 +19,7 @@ List<int> gregorianToJalali(int g_y, int g_m, int g_d) {
     // leap and after Feb
     gDayNo++;
   }
-  gDayNo += g_d - 1;
+  gDayNo += gD - 1;
   int jDayNo = gDayNo - 79;
   int jNp = div(jDayNo, 12053); // 12053 = (365 * 33 + 32 / 4)
   jDayNo = jDayNo % 12053;

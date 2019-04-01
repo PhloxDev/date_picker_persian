@@ -3,7 +3,7 @@
 
 ## date picker persian component which works on both ios and android.
 
-[![Pub](https://img.shields.io/pub/v/flutter_date_picker.svg)](https://pub.dartlang.org/packages/date_picker_persian)
+[![Pub](https://img.shields.io/pub/v/date_picker_persian.svg)](https://pub.dartlang.org/packages/date_picker_persian)
 
 # Example
 
@@ -16,7 +16,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 ```yaml
 dependencies:
   ...
-  date_picker_persian: "^0.1.1"
+  date_picker_persian: "^0.1.2"
 ```
 
 In your library add the following import:

@@ -66,8 +66,6 @@ class _DatePickerHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final MaterialLocalizations localizations =
-        MaterialLocalizations.of(context);
     final ThemeData themeData = Theme.of(context);
     final TextTheme headerTextTheme = themeData.primaryTextTheme;
     Color dayColor;
@@ -83,10 +81,6 @@ class _DatePickerHeader extends StatelessWidget {
         yearColor = mode == DatePickerMode.year ? Colors.white : Colors.white70;
         break;
     }
-    final TextStyle dayStyle =
-        headerTextTheme.display1.copyWith(color: dayColor, height: 1.4);
-    final TextStyle yearStyle =
-        headerTextTheme.subhead.copyWith(color: yearColor, height: 1.4);
 
     Color backgroundColor;
     switch (themeData.brightness) {
@@ -560,9 +554,6 @@ class DayPicker extends StatelessWidget {
           dayWidget = GestureDetector(
             behavior: HitTestBehavior.opaque,
             onTap: () {
-              var dayToBuild2 =
-                  DateTime(miladiToShamsi[0], miladiToShamsi[1], day);
-
               onChanged(dayToBuild);
             },
             child: dayWidget,
@@ -1014,8 +1005,6 @@ class _DatePickerDialogState extends State<_DatePickerDialog> {
     _selectedDate = widget.initialDate;
     var dateShamsi = gregorianToJalali(widget.initialDate.year,
         widget.initialDate.month, widget.initialDate.day);
-    _selectedDateShamsi =
-        new DateTime(dateShamsi[0], dateShamsi[1], dateShamsi[2]);
     _mode = widget.initialDatePickerMode;
   }
 
@@ -1039,7 +1028,6 @@ class _DatePickerDialogState extends State<_DatePickerDialog> {
   }
 
   DateTime _selectedDate;
-  DateTime _selectedDateShamsi;
   DatePickerMode _mode;
   final GlobalKey _pickerKey = GlobalKey();
 
