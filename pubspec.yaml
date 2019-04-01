@@ -1,0 +1,16 @@
+name: date_picker_persian
+description: date picker persian component which works on both ios and android
+author: Maryam Nazari <maryam.nazari26@gmail.com>
+version: 0.1.1
+homepage: https://github.com/PhloxDev/date_picker_persian.git
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
